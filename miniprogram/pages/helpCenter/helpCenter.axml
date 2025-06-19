@@ -1,0 +1,67 @@
+<view class="help-center">
+  <view class="header">
+    <view class="help-icon">🛟</view>
+    <text class="title">帮助中心</text>
+    <text class="subtitle">常见问题解答</text>
+  </view>
+  
+  <view class="search-bar">
+    <view class="search-input">
+      <text class="search-icon">🔍</text>
+      <view class="input-container">
+        <input 
+          placeholder="搜索问题" 
+          placeholder-class="search-placeholder" 
+          value="{{searchQuery}}"
+          onInput="handleSearchInput"
+          confirm-type="search"
+          class="search-text"
+          style="background-color: white !important; color: black !important;"
+        />
+      </view>
+      <text class="clear-icon" a:if="{{isSearching}}" onTap="clearSearch">✕</text>
+    </view>
+  </view>
+  
+  <view class="faq-list">
+    <view class="no-results" a:if="{{isSearching && filteredFaqCategories.length === 0}}">
+      <text class="no-results-icon">🔍</text>
+      <text class="no-results-text">没有找到相关问题</text>
+    </view>
+    
+    <block a:for="{{filteredFaqCategories}}" a:key="id" a:for-item="category">
+      <view class="faq-category" a:if="{{category.faqs.length > 0}}">
+        <view class="category-title">{{category.title}}</view>
+        
+        <view class="category-faqs">
+          <block a:for="{{category.faqs}}" a:for-index="idx" a:for-item="faq">
+            <view class="faq-item">
+              <view class="faq-question" onTap="toggleFaq" data-faq-id="{{category.id + '-' + idx}}">
+                <text class="question-text">{{faq.question}}</text>
+                <text class="arrow {{expandedFaqIds.includes(category.id + '-' + idx) ? 'expanded' : ''}}">▾</text>
+              </view>
+              
+              <view class="faq-answer {{expandedFaqIds.includes(category.id + '-' + idx) ? 'expanded' : ''}}">
+                <text>{{faq.answer}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <view class="contact-wrapper">
+    <view class="contact-section">
+      <view class="contact-icon">👨‍💼</view>
+      <text class="contact-text">没有找到您的问题？</text>
+      <view class="button-container">
+        <button class="contact-button" onTap="contactCustomerService">联系客服</button>
+      </view>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <text>为您提供贴心服务</text>
+  </view>
+</view> 

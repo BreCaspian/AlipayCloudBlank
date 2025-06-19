@@ -1,0 +1,344 @@
+.banner {
+  height: 455rpx;
+  width: 100%;
+  background-image: url('/image/component_bg.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 105rpx;
+  height: 117rpx;
+  position: absolute;
+  top: 122rpx;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 46rpx;
+  color: #fff;
+  position: absolute;
+  top: 260rpx;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%);
+}
+
+.sub-title {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 24rpx;
+  position: absolute;
+  top: 330rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+}
+
+.fake-searchbar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: 92rpx;
+  width: 91.4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4rpx;
+  box-shadow: rgba(153, 153, 153, 0.24) 0 2px 7px;
+}
+
+.fake-placeholder {
+  margin-left: 12rpx;
+  color: rgba(153, 153, 153, 0.89);
+  font-size: 28rpx;
+}
+
+.hot {
+  padding-top: 60px;
+  padding-bottom: 30rpx;
+  padding-left: 4.26%;
+  padding-right: 4.26%;
+  box-sizing: border-box;
+}
+
+.tabs {
+  height: 92rpx;
+  position: sticky;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.tabs.shadow {
+  box-shadow: rgba(153, 153, 153, 0.24) 0 2px 7px;
+}
+
+.tabs-bar {
+  padding: 0 64rpx;
+  display: flex;
+  height: 100%;
+}
+
+.tabs-bar-tab {
+  bottom: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-bar-tab {
+  font-size: 32rpx;
+}
+
+.tabs-bar-tab-title {
+  color: #999;
+  padding: 16rpx 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+}
+
+.tabs-bar-tab-title.active {
+  font-weight: bold;
+  color: #1371F7;
+  border-bottom: 3px solid #1371F7;
+}
+
+.component-name {
+  color: rgb(51, 51, 51);
+  margin-right: 10rpx;
+}
+
+.component-brief {
+  color: #CCC;
+  font-size: 34rpx;
+}
+
+.list {
+  padding: 32rpx;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.list-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 34rpx;
+  padding-left: 32rpx;
+}
+
+.thumb {
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 30rpx;
+}
+
+.am-list-header {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.am-list-body::before {
+  display: none;
+}
+
+.list-item {
+  margin-bottom: 35rpx;
+}
+
+.list-wrap {
+  overflow: hidden;
+}
+
+.list-container {
+  display: flex;
+  width: 100%;
+  transition-duration: 500ms;
+}
+
+.logo_devCenter {
+  position: fixed;
+  right: 32rpx;
+  bottom: 44rpx;
+  width: 109rpx;
+  height: 121rpx;
+}
+
+.product-list-page {
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 搜索框样式 */
+.search-bar {
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.search-input {
+  width: 100%;
+  height: 80rpx;
+  background-color: #ffffff;
+  border-radius: 40rpx;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  color: #999;
+}
+
+/* 商品列表样式 */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.product-item {
+  width: 48%;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-item:active {
+  transform: scale(0.98);
+}
+
+.product-image {
+  width: 100%;
+  height: 300rpx;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16rpx;
+}
+
+.product-name {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-price {
+  font-size: 32rpx;
+  color: #ff4d4f;
+  font-weight: bold;
+}
+
+/* 加载状态 */
+.loading-status {
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 26rpx;
+  color: #999;
+  width: 100%;
+  height: 120rpx; /* 固定高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading, .no-more, .empty {
+  padding: 20rpx 0;
+  width: 100%;
+}
+
+/* 加载动画 */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+
+.loading-bounce1, .loading-bounce2, .loading-bounce3 {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #49a9ee;
+  border-radius: 50%;
+  margin: 0 6rpx;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-bounce1 {
+  animation-delay: -0.32s;
+}
+
+.loading-bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+.loading-text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 没有更多样式 */
+.no-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-more-line {
+  width: 100rpx;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.no-more-text {
+  margin: 0 20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 空状态 */
+.empty {
+  font-size: 28rpx;
+  color: #999;
+  padding: 60rpx 0;
+}
+
+/* 底部占位 */
+.bottom-placeholder {
+  height: 100rpx;
+  width: 100%;
+}

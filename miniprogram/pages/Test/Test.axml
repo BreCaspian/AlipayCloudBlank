@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="title">云环境连接测试</view>
+  
+  <view class="section">
+    <button type="primary" onTap="testCloudEnv" loading="{{isLoading}}" class="btn">测试云环境连接</button>
+    <button type="default" onTap="testHelloworld" loading="{{isLoading}}" class="btn">测试Helloworld</button>
+    <button type="warn" onTap="debugItemData" loading="{{isLoading}}" class="btn">调试商品数据</button>
+  </view>
+  
+  <view class="result" a:if="{{testResult}}">
+    <view class="result-title">测试结果:</view>
+    <view class="result-content">{{testResult}}</view>
+  </view>
+  
+  <view class="error" a:if="{{error}}">
+    <view class="error-title">错误信息:</view>
+    <view class="error-content">{{error}}</view>
+  </view>
+  
+  <view class="tips">
+    <view class="tips-title">排查步骤:</view>
+    <view class="tips-content">
+      <text>1. 检查云环境ID是否正确</text>
+      <text>2. 确认云函数是否已部署</text>
+      <text>3. 检查网络连接是否正常</text>
+      <text>4. 查看IDE控制台是否有错误信息</text>
+      <text>5. 确认开发者工具版本是否最新</text>
+      <text>6. 确认已登录小程序开发者账号</text>
+    </view>
+  </view>
+</view>

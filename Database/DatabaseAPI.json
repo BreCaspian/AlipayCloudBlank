@@ -1,0 +1,496 @@
+{
+  "t_category": [
+    {
+      "id": "1",
+      "name": "千层",
+      "icon": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E8%8A%92%E6%9E%9C%E6%A8%B1%E6%A1%83%E5%8D%83%E5%B1%82.jpg"
+    },
+    {
+      "id": "2",
+      "name": "甜品",
+      "icon": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E8%93%9D%E8%8E%93%E5%B7%B4%E6%96%AF%E5%85%8B.jpg"
+    },
+    {
+      "id": "3",
+      "name": "生日蛋糕",
+      "icon": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%88%B1%E5%BF%83.jpg"
+    },
+    {
+      "id": "4",
+      "name": "饮品",
+      "icon": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E7%BB%8F%E5%85%B8%E6%8B%BF%E9%93%81.jpg"
+    }
+  ],
+  "t_sub_category": [
+    {
+      "id": "101",
+      "category_id": "1",
+      "name": "水果千层"
+    },
+    {
+      "id": "102",
+      "category_id": "1",
+      "name": "巧克力千层"
+    },
+    {
+      "id": "201",
+      "category_id": "2",
+      "name": "蛋糕"
+    },
+    {
+      "id": "202",
+      "category_id": "2",
+      "name": "甜点"
+    },
+    {
+      "id": "301",
+      "category_id": "3",
+      "name": "花卉蛋糕"
+    },
+    {
+      "id": "302",
+      "category_id": "3",
+      "name": "主题蛋糕"
+    },
+    {
+      "id": "401",
+      "category_id": "4",
+      "name": "咖啡"
+    },
+    {
+      "id": "402",
+      "category_id": "4",
+      "name": "特调饮品"
+    }
+  ],
+  "t_product": [
+    {
+      "id": "1001",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "芒果樱桃千层",
+      "price": 58,
+      "description": "精选芒果与新鲜樱桃完美结合，口感清爽丰富",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E8%8A%92%E6%9E%9C%E6%A8%B1%E6%A1%83%E5%8D%83%E5%B1%82.jpg",
+      "stock": 50,
+      "sales": 120
+    },
+    {
+      "id": "1002",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "芒果芋泥千层",
+      "price": 62,
+      "description": "芒果与芋泥的创新搭配，层次分明，甜而不腻",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E8%8A%92%E6%9E%9C%E8%8A%8B%E6%B3%A5%E5%8D%83%E5%B1%82.jpg",
+      "stock": 45,
+      "sales": 98
+    },
+    {
+      "id": "1003",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "杨梅荔枝",
+      "price": 65,
+      "description": "杨梅与荔枝的酸甜搭配，清新爽口",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E6%9D%A8%E6%A2%85%E8%8D%94%E6%9E%9D.jpg",
+      "stock": 40,
+      "sales": 75
+    },
+    {
+      "id": "1004",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "荔枝玫瑰",
+      "price": 68,
+      "description": "荔枝与食用玫瑰的完美结合，香气扑鼻",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E8%8D%94%E6%9E%9D%E7%8E%AB%E7%91%B0.jpg",
+      "stock": 35,
+      "sales": 82
+    },
+    {
+      "id": "1005",
+      "category_id": "1",
+      "sub_category_id": "102",
+      "name": "奥利奥芒果千层",
+      "price": 59,
+      "description": "奥利奥饼干碎与芒果的融合，口感丰富多层次",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E5%A5%A5%E5%88%A9%E5%A5%A5%E8%8A%92%E6%9E%9C%E5%8D%83%E5%B1%82.jpg",
+      "stock": 55,
+      "sales": 140
+    },
+    {
+      "id": "1006",
+      "category_id": "1",
+      "sub_category_id": "102",
+      "name": "奥利奥切块",
+      "price": 15,
+      "description": "精致小块奥利奥千层，方便分享",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E5%A5%A5%E5%88%A9%E5%A5%A5%E5%88%87%E5%9D%97.jpg",
+      "stock": 60,
+      "sales": 180
+    },
+    {
+      "id": "1007",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "桑葚蓝莓切块",
+      "price": 16,
+      "description": "桑葚与蓝莓的双重果香，精致小块包装",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E6%A1%91%E8%91%9A%E8%93%9D%E8%8E%93%E5%88%87%E5%9D%97.jpg",
+      "stock": 65,
+      "sales": 95
+    },
+    {
+      "id": "1008",
+      "category_id": "1",
+      "sub_category_id": "102",
+      "name": "伯爵红茶切块",
+      "price": 14,
+      "description": "精选伯爵红茶注入千层蛋糕，香气馥郁",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E4%BC%AF%E7%88%B5%E7%BA%A2%E8%8C%B6%E5%88%87%E5%9D%97.jpg",
+      "stock": 70,
+      "sales": 110
+    },
+    {
+      "id": "1009",
+      "category_id": "1",
+      "sub_category_id": "101",
+      "name": "茉莉青提蜜瓜",
+      "price": 63,
+      "description": "茉莉花香与青提、蜜瓜的清新组合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E5%8D%83%E5%B1%82/%E8%8C%89%E8%8E%89%E9%9D%92%E6%8F%90%E8%9C%9C%E7%93%9C.jpg",
+      "stock": 38,
+      "sales": 65
+    },
+    {
+      "id": "2001",
+      "category_id": "2",
+      "sub_category_id": "201",
+      "name": "草莓奶油蛋糕",
+      "price": 88,
+      "description": "新鲜草莓与柔滑奶油的经典搭配，香甜可口",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E8%8D%89%E8%8E%93%E5%A5%B6%E6%B2%B9%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 40,
+      "sales": 120
+    },
+    {
+      "id": "2002",
+      "category_id": "2",
+      "sub_category_id": "201",
+      "name": "樱桃蛋糕",
+      "price": 92,
+      "description": "精选大颗樱桃装饰，口感丰富多汁",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E6%A8%B1%E6%A1%83%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 35,
+      "sales": 85
+    },
+    {
+      "id": "2003",
+      "category_id": "2",
+      "sub_category_id": "201",
+      "name": "ins蛋糕",
+      "price": 108,
+      "description": "网红款ins风格蛋糕，美观与美味兼具",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/ins%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 30,
+      "sales": 150
+    },
+    {
+      "id": "2004",
+      "category_id": "2",
+      "sub_category_id": "201",
+      "name": "玉桂狗蛋糕卷",
+      "price": 78,
+      "description": "玉桂狗造型蛋糕卷，松软可爱，适合儿童派对",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E7%8E%89%E6%A1%82%E7%8B%97%E8%9B%8B%E7%B3%95%E5%8D%B7.jpg",
+      "stock": 45,
+      "sales": 90
+    },
+    {
+      "id": "2005",
+      "category_id": "2",
+      "sub_category_id": "202",
+      "name": "蓝莓巴斯克",
+      "price": 68,
+      "description": "西班牙巴斯克风格芝士蛋糕，蓝莓口味",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E8%93%9D%E8%8E%93%E5%B7%B4%E6%96%AF%E5%85%8B.jpg",
+      "stock": 40,
+      "sales": 110
+    },
+    {
+      "id": "2006",
+      "category_id": "2",
+      "sub_category_id": "202",
+      "name": "抹茶巴斯克",
+      "price": 72,
+      "description": "抹茶风味巴斯克芝士蛋糕，苦甜适中",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E6%8A%B9%E8%8C%B6%E5%B7%B4%E6%96%AF%E5%85%8B.jpg",
+      "stock": 38,
+      "sales": 95
+    },
+    {
+      "id": "2007",
+      "category_id": "2",
+      "sub_category_id": "202",
+      "name": "草莓塔贝果",
+      "price": 45,
+      "description": "草莓塔与贝果的创新结合，口感丰富",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E8%8D%89%E8%8E%93%E5%A1%94%E8%B4%9D%E6%9E%9C.jpg",
+      "stock": 50,
+      "sales": 130
+    },
+    {
+      "id": "2008",
+      "category_id": "2",
+      "sub_category_id": "202",
+      "name": "玫瑰草莓贝果",
+      "price": 48,
+      "description": "玫瑰与草莓风味贝果，芳香四溢",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E7%8E%AB%E7%91%B0%E8%8D%89%E8%8E%93%E8%B4%9D%E6%9E%9C.jpg",
+      "stock": 45,
+      "sales": 85
+    },
+    {
+      "id": "2009",
+      "category_id": "2",
+      "sub_category_id": "202",
+      "name": "树莓抹茶松塔",
+      "price": 52,
+      "description": "树莓与抹茶的完美结合，层次丰富",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9C%E5%93%81/%E6%A0%91%E8%8E%93%E6%8A%B9%E8%8C%B6%E6%9D%BE%E5%A1%94.jpg",
+      "stock": 42,
+      "sales": 75
+    },
+    {
+      "id": "3001",
+      "category_id": "3",
+      "sub_category_id": "301",
+      "name": "蝴蝶兰蛋糕",
+      "price": 198,
+      "description": "精致蝴蝶兰装饰，适合生日、周年纪念等重要场合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E8%9D%B4%E8%9D%B6%E5%85%B0%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 25,
+      "sales": 60
+    },
+    {
+      "id": "3002",
+      "category_id": "3",
+      "sub_category_id": "301",
+      "name": "梦中情花",
+      "price": 188,
+      "description": "浪漫花卉装饰，梦幻般的视觉享受",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E6%A2%A6%E4%B8%AD%E6%83%85%E8%8A%B1.jpg",
+      "stock": 20,
+      "sales": 45
+    },
+    {
+      "id": "3003",
+      "category_id": "3",
+      "sub_category_id": "301",
+      "name": "鲜花蛋糕",
+      "price": 168,
+      "description": "精选食用鲜花装饰，典雅美丽",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E9%B2%9C%E8%8A%B1%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 30,
+      "sales": 70
+    },
+    {
+      "id": "3004",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "绿野仙踪蛋糕",
+      "price": 178,
+      "description": "森林系主题蛋糕，绿色与自然的完美结合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%BB%BF%E9%87%8E%E4%BB%99%E8%B8%AA%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 18,
+      "sales": 40
+    },
+    {
+      "id": "3005",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "爱心",
+      "price": 158,
+      "description": "心形设计，表达爱意的最佳选择",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%88%B1%E5%BF%83.jpg",
+      "stock": 35,
+      "sales": 85
+    },
+    {
+      "id": "3006",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "爱心简约蛋糕",
+      "price": 138,
+      "description": "简约风格心形蛋糕，甜蜜而不腻",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%88%B1%E5%BF%83%E7%AE%80%E7%BA%A6%E8%9B%8B%E7%B3%95.jpg",
+      "stock": 40,
+      "sales": 95
+    },
+    {
+      "id": "3007",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "BLACKPINK",
+      "price": 228,
+      "description": "BLACKPINK粉丝专属定制蛋糕，时尚潮流",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/BLACKPINK.png",
+      "stock": 15,
+      "sales": 120
+    },
+    {
+      "id": "3008",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "粉色蝴蝶结蛋糕",
+      "price": 168,
+      "description": "粉色系蝴蝶结装饰，少女心满满",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%B2%89%E8%89%B2%E8%9D%B4%E8%9D%B6%E7%BB%93%E8%9B%8B%E7%B3%95.png",
+      "stock": 25,
+      "sales": 60
+    },
+    {
+      "id": "3009",
+      "category_id": "3",
+      "sub_category_id": "302",
+      "name": "紫精灵蛋糕",
+      "price": 188,
+      "description": "紫色系童话主题蛋糕，梦幻精灵风格",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E7%94%9F%E6%97%A5%E8%9B%8B%E7%B3%95/%E7%B4%AB%E7%B2%BE%E7%81%B5%E8%9B%8B%E7%B3%95.png",
+      "stock": 20,
+      "sales": 50
+    },
+    {
+      "id": "4001",
+      "category_id": "4",
+      "sub_category_id": "401",
+      "name": "经典拿铁",
+      "price": 28,
+      "description": "浓郁的意式浓缩与丝滑牛奶的经典搭配",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E7%BB%8F%E5%85%B8%E6%8B%BF%E9%93%81.jpg",
+      "stock": 100,
+      "sales": 500
+    },
+    {
+      "id": "4002",
+      "category_id": "4",
+      "sub_category_id": "401",
+      "name": "香草拿铁",
+      "price": 32,
+      "description": "加入香草风味的经典拿铁，香甜可口",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E9%A6%99%E8%8D%89%E6%8B%BF%E9%93%81.jpg",
+      "stock": 90,
+      "sales": 420
+    },
+    {
+      "id": "4003",
+      "category_id": "4",
+      "sub_category_id": "401",
+      "name": "烤苹果热拿铁",
+      "price": 36,
+      "description": "秋冬限定，烤苹果风味与咖啡的温暖结合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E7%83%A4%E8%8B%B9%E6%9E%9C%E7%83%AD%E6%8B%BF%E9%93%81.jpg",
+      "stock": 80,
+      "sales": 320
+    },
+    {
+      "id": "4004",
+      "category_id": "4",
+      "sub_category_id": "401",
+      "name": "椰青冰萃美式",
+      "price": 38,
+      "description": "清新椰香与美式咖啡的冰爽结合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E6%A4%B0%E9%9D%92%E5%86%B0%E8%90%83%E7%BE%8E%E5%BC%8F.jpg",
+      "stock": 85,
+      "sales": 380
+    },
+    {
+      "id": "4005",
+      "category_id": "4",
+      "sub_category_id": "401",
+      "name": "话梅美式（冰）",
+      "price": 34,
+      "description": "酸甜话梅风味美式咖啡，提神醒脑",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E8%AF%9D%E6%A2%85%E7%BE%8E%E5%BC%8F%EF%BC%88%E5%86%B0%EF%BC%89.jpg",
+      "stock": 75,
+      "sales": 290
+    },
+    {
+      "id": "4006",
+      "category_id": "4",
+      "sub_category_id": "402",
+      "name": "青提柠檬冰茉莉",
+      "price": 32,
+      "description": "青提、柠檬与茉莉花茶的清新组合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E9%9D%92%E6%8F%90%E6%9F%A0%E6%AA%AC%E5%86%B0%E8%8C%89%E8%8E%89.jpg",
+      "stock": 90,
+      "sales": 350
+    },
+    {
+      "id": "4007",
+      "category_id": "4",
+      "sub_category_id": "402",
+      "name": "荔枝白月光",
+      "price": 36,
+      "description": "荔枝清香与特调奶茶的完美结合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E8%8D%94%E6%9E%9D%E7%99%BD%E6%9C%88%E5%85%89.jpg",
+      "stock": 85,
+      "sales": 320
+    },
+    {
+      "id": "4008",
+      "category_id": "4",
+      "sub_category_id": "402",
+      "name": "抹茶草莓牛乳",
+      "price": 38,
+      "description": "抹茶与草莓风味牛奶，甜美与清新并存",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E6%8A%B9%E8%8C%B6%E8%8D%89%E8%8E%93%E7%89%9B%E4%B9%B3.jpg",
+      "stock": 80,
+      "sales": 280
+    },
+    {
+      "id": "4009",
+      "category_id": "4",
+      "sub_category_id": "402",
+      "name": "石榴泡泡",
+      "price": 35,
+      "description": "新鲜石榴果汁与气泡水的清爽组合",
+      "url": "https://env-00jxtoex7l0t.normal.cloudstatic.cn/Plot/%E9%A5%AE%E5%93%81/%E7%9F%B3%E6%A6%B4%E6%B3%A1%E6%B3%A1.jpg",
+      "stock": 70,
+      "sales": 260
+    }
+  ],
+  "t_cart": [
+    {
+      "id": "cart001",
+      "user_id": "user123",
+      "product_id": "1001",
+      "quantity": 1,
+      "selected": true,
+      "create_time": "2023-06-10 14:30:25"
+    }
+  ],
+  "t_order": [
+    {
+      "id": "order001",
+      "user_id": "user123",
+      "order_no": "20230610143025001",
+      "total_price": 58.00,
+      "status": 1,
+      "address": "广州市天河区体育西路123号",
+      "consignee": "张三",
+      "mobile": "13800138000",
+      "message": "请尽快发货",
+      "create_time": "2023-06-10 14:30:25",
+      "payment_time": "2023-06-10 14:35:18",
+      "items": [
+        {
+          "product_id": "1001",
+          "quantity": 1,
+          "price": 58.00
+        }
+      ]
+    }
+  ]
+} 

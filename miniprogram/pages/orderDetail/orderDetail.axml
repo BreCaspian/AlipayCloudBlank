@@ -1,0 +1,104 @@
+<view class="order-detail-page" style="padding-top: {{statusBarHeight}}px;">
+  <!-- 顶部导航 -->
+  <view class="header">
+    <view class="back-icon" onTap="goBack">←</view>
+    <text class="title">订单详情</text>
+    <view class="placeholder" style="width: 20px;"></view>
+  </view>
+  
+  <!-- 加载状态 -->
+  <view class="loading-container" a:if="{{loading}}">
+    <text class="loading-text">加载中...</text>
+  </view>
+  
+  <!-- 错误信息 -->
+  <view class="error-message" a:if="{{errorMessage}}">{{errorMessage}}</view>
+  
+  <!-- 订单详情内容 -->
+  <block a:if="{{!loading && orderInfo}}">
+    <!-- 订单状态 -->
+    <view class="status-section">
+      <text class="status-text">{{statusMap[orderInfo.status]}}</text>
+    </view>
+    
+    <!-- 收货地址 -->
+    <view class="info-card">
+      <view class="card-title">收货信息</view>
+      <view class="address-info">
+        <text class="name-phone">{{orderInfo.consignee}} {{orderInfo.mobile}}</text>
+        <text class="address">{{orderInfo.address}}</text>
+      </view>
+    </view>
+    
+    <!-- 订单信息 -->
+    <view class="info-card">
+      <view class="card-title">订单信息</view>
+      <view class="order-info">
+        <view class="info-row">
+          <text class="info-label">订单编号</text>
+          <view class="info-value-copy">
+            <text class="info-value">{{orderInfo.order_no}}</text>
+            <text class="copy-btn" onTap="copyOrderNo">复制</text>
+          </view>
+        </view>
+        <view class="info-row">
+          <text class="info-label">创建时间</text>
+          <text class="info-value">{{orderInfo.create_time}}</text>
+        </view>
+        <view class="info-row" a:if="{{orderInfo.payment_time}}">
+          <text class="info-label">支付时间</text>
+          <text class="info-value">{{orderInfo.payment_time}}</text>
+        </view>
+        <view class="info-row" a:if="{{orderInfo.message}}">
+          <text class="info-label">订单备注</text>
+          <text class="info-value">{{orderInfo.message}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 商品信息 -->
+    <view class="info-card">
+      <view class="card-title">商品信息</view>
+      <view class="products-list">
+        <block a:for="{{orderInfo.items}}" a:key="product_id">
+          <view class="product-item">
+            <image class="product-image" src="{{item.image}}" mode="aspectFill" />
+            <view class="product-info">
+              <text class="product-name">{{item.name}}</text>
+              <view class="product-price-qty">
+                <text class="product-price">¥{{item.price}}</text>
+                <text class="product-qty">x{{item.quantity}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      
+      <!-- 金额信息 -->
+      <view class="price-summary">
+        <view class="price-row">
+          <text>商品总价</text>
+          <text>¥{{orderInfo.total_price}}</text>
+        </view>
+        <view class="price-row">
+          <text>运费</text>
+          <text>¥0.00</text>
+        </view>
+        <view class="price-row total">
+          <text>实付款</text>
+          <text class="total-price">¥{{orderInfo.total_price}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 底部按钮 -->
+    <view class="footer">
+      <block a:if="{{orderInfo.status === 0}}">
+        <button class="action-btn primary">去支付</button>
+      </block>
+      <block a:if="{{orderInfo.status === 2}}">
+        <button class="action-btn primary" onTap="confirmReceived">确认收货</button>
+      </block>
+    </view>
+  </block>
+</view> 

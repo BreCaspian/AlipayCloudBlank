@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mycart-item": "/components/MyCart/MyCart",
+    "list-item": "/components/ListItem/ListItem"
+  },
+  "styleIsolation": "apply-shared"
+}

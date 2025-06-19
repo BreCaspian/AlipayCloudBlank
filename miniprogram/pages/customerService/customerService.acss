@@ -1,0 +1,248 @@
+.customer-service {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 页头 */
+.header {
+  background: linear-gradient(135deg, #ff7070 0%, #ff5a5a 100%);
+  padding: 70rpx 30rpx 80rpx;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4rpx 20rpx rgba(255, 90, 90, 0.3);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -50rpx;
+  right: -50rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: -80rpx;
+  left: -80rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.service-icon {
+  font-size: 64rpx;
+  margin-bottom: 16rpx;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10rpx);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 44rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+  display: block;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 2rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 28rpx;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1rpx;
+}
+
+/* 联系方式卡片 */
+.contact-methods {
+  padding: 30rpx;
+  margin-top: -40rpx;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 12rpx;
+  background: linear-gradient(to bottom, #ff7070, #ff5a5a);
+  opacity: 0.8;
+}
+
+.contact-card:active {
+  transform: scale(0.98);
+  background-color: #fafafa;
+}
+
+.contact-icon {
+  font-size: 44rpx;
+  margin-right: 30rpx;
+  background-color: rgba(255, 112, 112, 0.1);
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.contact-content {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.contact-arrow {
+  color: #bbb;
+  font-size: 30rpx;
+  margin-right: 10rpx;
+}
+
+/* 服务时间 */
+.service-hours, .quick-faqs {
+  margin: 30rpx;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hours::before, .quick-faqs::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 8rpx;
+  background: linear-gradient(to bottom, #ff7070, #ff5a5a);
+  opacity: 0.8;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 24rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  font-size: 36rpx;
+  margin-right: 12rpx;
+  color: #ff7070;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+}
+
+.days {
+  color: #333;
+  font-weight: 500;
+}
+
+.hours {
+  color: #666;
+}
+
+/* 常见问题 */
+.faq-list {
+  margin-top: 16rpx;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-arrow {
+  color: #ccc;
+  transition: transform 0.3s;
+}
+
+.faq-item:active {
+  background-color: #fafafa;
+}
+
+.faq-item:active .faq-arrow {
+  transform: translateX(5rpx);
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 60rpx 0 40rpx;
+  font-size: 24rpx;
+  color: #999;
+} 

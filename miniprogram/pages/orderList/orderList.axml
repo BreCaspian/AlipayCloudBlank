@@ -1,0 +1,78 @@
+<view class="order-list-page" style="padding-top: {{statusBarHeight}}px;">
+  <!-- 顶部导航 -->
+  <view class="header">
+    <view class="back-icon" onTap="goBack">←</view>
+    <text class="title">我的订单</text>
+    <view class="placeholder" style="width: 20px;"></view>
+  </view>
+  
+  <!-- 状态选项卡 -->
+  <view class="status-tabs">
+    <view class="tab-item {{currentStatus === '' ? 'active' : ''}}" 
+          onTap="switchStatus" data-status="">
+      <text>全部</text>
+    </view>
+    <view class="tab-item {{currentStatus === '0' ? 'active' : ''}}" 
+          onTap="switchStatus" data-status="0">
+      <text>待付款</text>
+    </view>
+    <view class="tab-item {{currentStatus === '1' ? 'active' : ''}}" 
+          onTap="switchStatus" data-status="1">
+      <text>待发货</text>
+    </view>
+    <view class="tab-item {{currentStatus === '2' ? 'active' : ''}}" 
+          onTap="switchStatus" data-status="2">
+      <text>待收货</text>
+    </view>
+    <view class="tab-item {{currentStatus === '3' ? 'active' : ''}}" 
+          onTap="switchStatus" data-status="3">
+      <text>已完成</text>
+    </view>
+  </view>
+  
+  <!-- 错误信息提示 -->
+  <view class="error-message" a:if="{{errorMessage}}">{{errorMessage}}</view>
+  
+  <!-- 加载提示 -->
+  <view class="loading-container" a:if="{{loading}}">
+    <text class="loading-text">加载中...</text>
+  </view>
+  
+  <!-- 订单列表 -->
+  <view class="order-list" a:if="{{!loading && orders.length > 0}}">
+    <block a:for="{{orders}}" a:key="_id">
+      <view class="order-item" onTap="viewOrderDetail" data-id="{{item._id}}">
+        <view class="order-header">
+          <text class="order-no">订单号: {{item.order_no}}</text>
+          <text class="order-status">{{statusMap[item.status]}}</text>
+        </view>
+        
+        <view class="order-products">
+          <block a:for="{{item.items}}" a:for-item="product" a:key="product_id">
+            <view class="product-item">
+              <image class="product-image" src="{{product.image}}" mode="aspectFill" />
+              <view class="product-info">
+                <text class="product-name">{{product.name}}</text>
+                <view class="product-price-qty">
+                  <text class="product-price">¥{{product.price}}</text>
+                  <text class="product-qty">x{{product.quantity}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        
+        <view class="order-footer">
+          <text class="order-time">{{item.create_time}}</text>
+          <text class="order-total">总计: ¥{{item.total_price}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 空状态 -->
+  <view class="empty-state" a:if="{{!loading && orders.length === 0}}">
+    <text class="empty-icon">📝</text>
+    <text class="empty-text">暂无订单</text>
+  </view>
+</view> 

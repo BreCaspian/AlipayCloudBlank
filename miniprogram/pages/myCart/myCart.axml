@@ -1,0 +1,70 @@
+<view class="cart-page">
+    <!-- 调试信息已移除 -->
+
+    <!-- 加载中显示 -->
+    <view class="loading-container" a:if="{{loading}}">
+        <text class="loading-text">购物车加载中...</text>
+    </view>
+
+    <!-- 购物车为空的情况 -->
+    <view class="empty-tip" a:elif="{{cartEmpty}}">
+        <view class="empty-cart-icon">🛒</view>
+        <text class="empty-text">购物车还是空的，去挑选喜欢的商品吧~</text>
+        <button class="browse-btn" onTap="goToHome">去逛逛</button>
+    </view>
+    
+    <block a:else>
+        <!-- 顶部操作栏 -->
+        <view class="action-bar">
+            <view class="check-all-container">
+                <checkbox checked="{{allChecked}}" onChange="toggleAllCheck" class="check-all" />
+                <text class="check-all-text">全选</text>
+            </view>
+            <button class="delete-btn" onTap="removeSelected">删除选中</button>
+        </view>
+        
+        <!-- 商品列表 -->
+        <scroll-view class="goods-list" scroll-y>
+            <block a:for="{{cartItems}}" a:key="_id">
+                <view class="cart-item {{item.selected ? 'selected' : ''}}">
+                    <checkbox 
+                        checked="{{item.selected}}" 
+                        class="checkbox" 
+                        data-index="{{index}}" 
+                        onChange="onItemCheckChange"
+                    ></checkbox>
+                    <image src="{{item.url || '/images/default.jpg'}}" class="item-image" mode="aspectFill"/>
+                    <view class="item-info">
+                        <view class="name-container">
+                            <text class="item-name">{{item.name || '未知商品'}}</text>
+                        </view>
+                        <view class="price-quantity-row">
+                            <text class="item-price">¥{{item.price || 0}}</text>
+                            <view class="quantity-control">
+                                <view class="quantity-btn minus" onTap="changeQuantity" data-index="{{index}}" data-type="minus">-</view>
+                                <text class="quantity">{{item.quantity || 1}}</text>
+                                <view class="quantity-btn plus" onTap="changeQuantity" data-index="{{index}}" data-type="add">+</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+        
+        <!-- 底部结算栏 -->
+        <view class="checkout-bar">
+            <view class="price-info">
+                <text class="total-text">合计：</text>
+                <text class="total-price">¥{{totalPrice}}</text>
+                <text class="count-text">(已选{{checkedCount}}件)</text>
+            </view>
+            <button 
+                class="checkout-btn" 
+                onTap="onCheckout"
+                disabled="{{checkedCount === 0}}"
+            >
+                结算
+            </button>
+        </view>
+    </block>
+</view>

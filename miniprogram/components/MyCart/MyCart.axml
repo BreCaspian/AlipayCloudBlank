@@ -1,0 +1,15 @@
+
+<view class="checkout-bar">
+  <view class="price-info">
+    <text class="total-text">合计：</text>
+    <text class="total-price">¥{{totalPrice.toFixed(2)}}</text>
+    <text class="count-text">(已选{{checkedCount}}件)</text>
+  </view>
+  <button size="default" type="primary"
+    class="checkout-btn" 
+    onTap="onCheckout"
+    disabled="{{disabled}}"
+  >
+    结算
+  </button>
+</view>

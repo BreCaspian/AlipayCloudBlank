@@ -1,0 +1,10 @@
+<view class="list-item">
+  <view class="item-content">
+    <checkbox checked="{{checked}}" onChange="onCheckChange" />
+    <image class="item-img" src="{{item.imageUrl}}" />
+    <view class="item-text">
+      <text class="productName">{{item.name}}</text>
+      <text class="price">{{item.price}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+﻿{
+  "name": "updateCartItem",
+  "version": "1.0.0",
+  "description": "Update cart item",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alipay/faas-server-sdk": "latest"
+  }
+}

@@ -1,0 +1,40 @@
+<view class="detail-page">
+  <!-- 商品信息 -->
+  <view a:if="{{loading}}" class="loading">加载中...</view>
+  
+  <view a:elif="{{!productDetail}}" class="not-found">
+    商品不存在或已下架
+</view>
+
+  <view a:else class="product-detail">
+    <!-- 商品图片轮播 -->
+    <swiper class="product-swiper" indicator-dots="true" autoplay="{{false}}">
+      <swiper-item>
+        <image 
+          src="{{productDetail.url || '/images/default.jpg'}}" 
+          mode="aspectFill" 
+          class="product-image" 
+          onError="imageError" 
+        />
+      </swiper-item>
+    </swiper>
+    
+    <!-- 商品信息 -->
+    <view class="product-info">
+      <text class="product-name">{{productDetail.name}}</text>
+      <text class="product-price">¥{{productDetail.price}}</text>
+      <view class="product-sales">销量: {{productDetail.sales || 0}}</view>
+    </view>
+    
+    <!-- 商品详情 -->
+    <view class="product-desc-title">商品详情</view>
+    <view class="product-description">{{productDetail.description || '暂无详细描述'}}</view>
+  </view>
+  
+  <!-- 底部操作栏 - 商品操作栏组件 -->
+  <view class="detail-settle">
+    <view class="action-buttons">
+      <button size="default" type="primary" onTap="addToCart">加入购物车</button>
+      </view>
+  </view>
+</view>

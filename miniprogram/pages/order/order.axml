@@ -1,0 +1,65 @@
+<view class="order-page">
+  <!-- 使用自定义错误提示组件 -->
+  <order-error-tip a:if="{{errorMessage}}" errorMessage="{{errorMessage}}" />
+  
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="title">订单确认</text>
+  </view>
+  
+  <!-- 收货地址 -->
+  <view class="address-section">
+    <view class="address-icon">📍</view>
+    <view class="address-info">
+      <view class="address-top">
+        <text class="address-name">{{address.name}}</text>
+        <text class="address-phone">{{address.phone}}</text>
+      </view>
+      <view class="address-detail">{{address.address}}</view>
+    </view>
+    <view class="address-arrow">></view>
+  </view>
+  
+  <!-- 商品列表 -->
+  <scroll-view class="goods-list" scroll-y>
+    <view class="section-title">商品信息</view>
+    <block a:for="{{selectedItems}}" a:key="_id">
+      <view class="goods-item">
+        <image src="{{item.image || item.url || '/images/default.jpg'}}" class="goods-image" mode="aspectFill"/>
+        <view class="goods-info">
+          <text class="goods-name">{{item.name || item.title || '商品'}}</text>
+          <text class="goods-price">¥{{item.price}}</text>
+        </view>
+        <text class="goods-count">x{{item.quantity || 1}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 金额汇总 -->
+  <view class="amount-section">
+    <view class="amount-row">
+      <text>商品总价</text>
+      <text>¥{{totalAmount}}</text>
+    </view>
+    <view class="amount-row">
+      <text>运费</text>
+      <text>¥0.00</text>
+    </view>
+    <view class="amount-row total">
+      <text>应付总额</text>
+      <text class="total-price">¥{{totalAmount}}</text>
+    </view>
+  </view>
+
+  <!-- 支付按钮 -->
+  <view class="footer">
+    <button 
+      class="pay-btn" 
+      onTap="onSubmitOrder"
+      loading="{{loading}}"
+      disabled="{{loading || errorMessage}}"
+    >
+      {{loading ? '处理中...' : '立即支付'}}
+    </button>
+  </view>
+</view>

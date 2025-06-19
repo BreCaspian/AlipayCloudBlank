@@ -1,0 +1,49 @@
+
+.checkout-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.price-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.total-text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.total-price {
+  font-size: 32rpx;
+  color: #FF5000;
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+
+.count-text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.checkout-btn {
+  background-color: #FF5000;
+  color: white;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  padding: 0 50rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+
+.checkout-btn[disabled] {
+  opacity: 0.6;
+}

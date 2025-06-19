@@ -1,0 +1,5 @@
+<view class="list-item">
+  <image mode="aspectFill" src="{{productsList[index].imageUrl}}"></image>
+  <text class="item-name">{{item.name}}</text>
+  <text class="item-price">{{item.price}}</text>
+</view>

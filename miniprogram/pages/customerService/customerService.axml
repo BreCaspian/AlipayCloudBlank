@@ -1,0 +1,58 @@
+<view class="customer-service">
+  <view class="header">
+    <view class="service-icon">👩‍💼</view>
+    <text class="title">联系客服</text>
+    <text class="subtitle">我们随时为您提供帮助</text>
+  </view>
+  
+  <!-- 联系方式列表 -->
+  <view class="contact-methods">
+    <block a:for="{{contactMethods}}" a:key="title">
+      <view class="contact-card" onTap="handleContactAction" data-action="{{item.action}}" data-content="{{item.content}}">
+        <text class="contact-icon">{{item.icon}}</text>
+        <view class="contact-info">
+          <text class="contact-title">{{item.title}}</text>
+          <text class="contact-content">{{item.content}}</text>
+        </view>
+        <text class="contact-arrow">></text>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 服务时间 -->
+  <view class="service-hours">
+    <view class="section-title">
+      <text class="title-icon">🕒</text>
+      <text>服务时间</text>
+    </view>
+    <view class="hours-list">
+      <block a:for="{{businessHours}}" a:key="days">
+        <view class="hours-item">
+          <text class="days">{{item.days}}</text>
+          <text class="hours">{{item.hours}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 常见问题 -->
+  <view class="quick-faqs">
+    <view class="section-title">
+      <text class="title-icon">❓</text>
+      <text>常见问题</text>
+    </view>
+    <view class="faq-list">
+      <block a:for="{{faqs}}" a:key="*this" a:for-index="idx">
+        <view class="faq-item" onTap="navigateToFaq" data-index="{{idx}}">
+          <text>{{item}}</text>
+          <text class="faq-arrow">></text>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 版权信息 -->
+  <view class="footer">
+    <text>© 2023 版权所有</text>
+  </view>
+</view> 

@@ -1,0 +1,43 @@
+<view class="settings-page">
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <image class="user-avatar" src="{{userInfo.avatar}}" />
+    <view class="user-info">
+      <text class="user-nickname">{{userInfo.nickname}}</text>
+      <text class="user-phone">用户ID: {{userInfo.phone}}</text>
+    </view>
+  </view>
+  
+  <!-- 设置项列表 -->
+  <view class="settings-list">
+    <block a:for="{{settings}}" a:key="id">
+      <view class="setting-item" onTap="onSettingItemTap" data-id="{{item.id}}" data-type="{{item.type}}">
+        <view class="setting-left">
+          <text a:if="{{item.id === 'notification'}}" class="setting-icon">🔔</text>
+          <text a:elif="{{item.id === 'privacy'}}" class="setting-icon">🔒</text>
+          <text a:elif="{{item.id === 'about'}}" class="setting-icon">ℹ️</text>
+          <text a:elif="{{item.id === 'version'}}" class="setting-icon">📱</text>
+          <text class="setting-title">{{item.title}}</text>
+        </view>
+        
+        <!-- 根据类型显示不同的右侧内容 -->
+        <view class="setting-right">
+          <switch a:if="{{item.type === 'switch'}}" 
+                 checked="{{item.value}}" 
+                 onChange="onSwitchChange" 
+                 data-id="{{item.id}}" 
+                 color="#4facfe" />
+          
+          <text a:elif="{{item.type === 'info'}}" class="setting-value">{{item.value}}</text>
+          
+          <text a:elif="{{item.type === 'navigate'}}" class="setting-arrow">></text>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 退出登录按钮 -->
+  <view class="logout-button" onTap="onLogout">
+    <text>退出登录</text>
+  </view>
+</view> 

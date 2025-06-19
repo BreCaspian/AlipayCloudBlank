@@ -1,0 +1,22 @@
+{
+  "format": 2,
+  "compileOptions": {
+    "component2": true,
+    "enableNodeModuleBabelTransform": true
+  },
+  "miniprogramRoot": "./miniprogram",
+  "cloudbaseRoot": "cloud",
+  "cloud": {
+    "type": "CLOUDAPP",
+    "env": "env-00jxtoex7l0t"
+  },
+  "serverlessRoot": "server",
+  "uploadExclude": [
+    ".DS_Store",
+    "node_modules",
+    "package-lock.json"
+  ],
+  "bundleSetting": {
+    "enableWatch": false
+  }
+}

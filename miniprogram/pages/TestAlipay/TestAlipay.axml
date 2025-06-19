@@ -1,0 +1,4 @@
+<view>
+  New Page
+  <button size="default" type="primary" onTap="pay">支付</button>
+</view> 

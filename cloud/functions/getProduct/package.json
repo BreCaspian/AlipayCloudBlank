@@ -1,0 +1,12 @@
+﻿{
+  "name": "getProduct",
+  "version": "1.0.0",
+  "description": "Get product details",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alipay/faas-server-sdk": "latest"
+  }
+}

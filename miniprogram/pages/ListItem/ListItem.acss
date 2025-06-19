@@ -1,0 +1,16 @@
+.list-item {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.item-price {
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/myCart/myCart",
+    "pages/myinfo/myinfo",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/xiaoxi/xiaoxi",
+    "pages/my/my",
+    "pages/TestAlipay/TestAlipay",
+    "pages/Test/Test",
+    "pages/order/order",
+    "pages/orderList/orderList",
+    "pages/orderDetail/orderDetail",
+    "pages/settings/settings",
+    "pages/helpCenter/helpCenter",
+    "pages/customerService/customerService"
+  ],
+  "window": {
+    "defaultTitle": "CakeHouse"
+  },
+  "cloud": true,
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "tabBar": {
+    "textColor": "#dddddd",
+    "selectedColor": "#49a9ee",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "name": "主页",
+        "icon": "images/zhuye1.jpg",
+        "activeIcon": "images/zhuyexuanzhong.jpg"
+      },
+      {
+        "pagePath": "pages/myCart/myCart",
+        "name": "购物车",
+        "icon": "images/gouwuche.jpg",
+        "activeIcon": "images/gouwuchexuanzhong.jpg"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "我的",
+        "icon": "images/wode.jpg",
+        "activeIcon": "images/wodexuanzhong.jpg"
+      }
+    ]
+  }
+}

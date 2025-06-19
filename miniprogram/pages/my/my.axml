@@ -1,0 +1,76 @@
+<view class="my-page">
+  <!-- 用户信息 -->
+  <view class="user-info-section">
+    <view class="user-info-container">
+      <image class="user-avatar" src="{{userInfo.avatar}}" />
+      <view class="user-details">
+        <text class="user-nickname">{{userInfo.nickname}}</text>
+        <text class="user-id">用户ID: {{userInfo.nickname}}</text>
+      </view>
+    </view>
+    <view class="settings-icon" onTap="navigateToSettings">⚙️</view>
+  </view>
+
+  <!-- 我的订单 -->
+  <view class="order-section">
+    <view class="section-header" onTap="navigateToOrders">
+      <text class="section-title">我的订单</text>
+      <view class="view-all">
+        <text>查看全部</text>
+        <text class="arrow">></text>
+      </view>
+    </view>
+    
+    <view class="order-status-list">
+      <view class="order-status-item" onTap="navigateToOrders" data-status="0">
+        <view class="status-icon">
+          <text>📄</text>
+          <view a:if="{{orderStats.waitPay > 0}}" class="badge">{{orderStats.waitPay}}</view>
+        </view>
+        <text class="status-text">待付款</text>
+      </view>
+      
+      <view class="order-status-item" onTap="navigateToOrders" data-status="1">
+        <view class="status-icon">
+          <text>📦</text>
+          <view a:if="{{orderStats.waitShip > 0}}" class="badge">{{orderStats.waitShip}}</view>
+        </view>
+        <text class="status-text">待发货</text>
+      </view>
+      
+      <view class="order-status-item" onTap="navigateToOrders" data-status="2">
+        <view class="status-icon">
+          <text>🚚</text>
+          <view a:if="{{orderStats.waitReceive > 0}}" class="badge">{{orderStats.waitReceive}}</view>
+        </view>
+        <text class="status-text">待收货</text>
+      </view>
+      
+      <view class="order-status-item" onTap="navigateToOrders" data-status="3">
+        <view class="status-icon">
+          <text>✅</text>
+          <view a:if="{{orderStats.completed > 0}}" class="badge">{{orderStats.completed}}</view>
+        </view>
+        <text class="status-text">已完成</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 其他功能 -->
+  <view class="features-section">
+    <view class="feature-item" onTap="navigateToSettings">
+      <view class="feature-icon">⚙️</view>
+      <text class="feature-text">设置</text>
+    </view>
+    
+    <view class="feature-item" onTap="navigateToHelpCenter">
+      <view class="feature-icon">❓</view>
+      <text class="feature-text">帮助中心</text>
+    </view>
+    
+    <view class="feature-item" onTap="navigateToCustomerService">
+      <view class="feature-icon">📞</view>
+      <text class="feature-text">联系客服</text>
+    </view>
+  </view>
+</view>

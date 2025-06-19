@@ -1,0 +1,17 @@
+{
+  "title": "测试订单-2025-06-19",
+  "amount": 58.00,
+  "items": [
+    {
+      "product_id": "1001",
+      "name": "测试商品",
+      "image": "https://example.com/image.jpg",
+      "price": 58,
+      "quantity": 1
+    }
+  ],
+  "consignee": "测试用户",
+  "mobile": "13800138000",
+  "address": "广州市天河区体育西路123号",
+  "message": "测试留言，请尽快发货"
+} 

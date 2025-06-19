@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "order-error-tip": "/components/OrderErrorTip/OrderErrorTip"
+  },
+  "styleIsolation": "apply-shared"
+}

@@ -1,0 +1,8 @@
+<view class="error-container">
+  <view class="error-content">
+    <view class="error-icon">✕</view>
+    <view class="error-title">创建订单失败</view>
+    <view class="error-message" a:if="{{errorMessage}}">{{errorMessage}}</view>
+    <button class="error-btn" onTap="onBack">返回</button>
+  </view>
+</view> 

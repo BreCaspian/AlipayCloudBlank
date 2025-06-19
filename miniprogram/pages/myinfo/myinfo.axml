@@ -1,0 +1,41 @@
+<!-- 顶部轮播图 -->
+<swiper class="swiper-layout" indicator-dots="true" autoplay="true">
+  <block a:for="{{swiperImages}}" a:key="*this">
+    <swiper-item>
+      <image src="{{useCloudImages ? item.cloudUrl : item.url}}" mode="aspectFill" class="swiper-item-content" onError="swiperImageError" data-index="{{index}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="page-container">
+  <!-- 左侧分类导航 -->
+  <scroll-view class="category-sidebar" scroll-y="true">
+    <view 
+      a:for="{{categories}}" 
+      a:key="id" 
+      class="category-item {{currentCategoryId === item.id ? 'category-active' : ''}}" 
+      onTap="onCategoryTap" 
+      data-id="{{item.id}}"
+    >
+      <text>{{item.name}}</text>
+  </view>
+  </scroll-view>
+
+  <!-- 右侧九宫格内容区 -->
+  <view class="subcategory-content">
+    <view class="subcategory-grid">
+      <view 
+        a:for="{{subCategories}}" 
+        a:key="id" 
+        class="subcategory-item" 
+        onTap="onSubCategoryTap" 
+        data-id="{{item.id}}"
+        data-name="{{item.name}}"
+      >
+        <image src="{{item.icon || 'images/default.jpg'}}" mode="aspectFill" class="subcategory-image" />
+        <text class="subcategory-name">{{item.name}}</text>
+  </view>
+    </view>
+  </view>
+</view>
+

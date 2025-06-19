@@ -1,0 +1,12 @@
+﻿{
+  "name": "getOrder",
+  "version": "1.0.0",
+  "description": "Get order details",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alipay/faas-server-sdk": "latest"
+  }
+}
